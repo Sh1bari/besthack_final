@@ -12,7 +12,7 @@
 - [Service monitoring](http://62.217.182.34:8111/admin-ui/applications)
 - Actuator
 
-## Service registry service
+## Service registry
 - Spring Eureka
 - [Service registry](http://62.217.182.34:8111/eureka-ui)
 - Actuator
@@ -34,3 +34,6 @@
 - Spring validation
 - Firebase admin
 - Actuator
+
+## Deploy
+- Beget host
