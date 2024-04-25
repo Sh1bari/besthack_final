@@ -33,7 +33,6 @@
 - Log4j
 - Spring validation
 - Actuator
-<br>
 ![Database](https://github.com/Sh1bari/RT5_BestHack_24/blob/main/auth.png)
 
 ## Main service
@@ -44,7 +43,6 @@
 - Spring validation
 - Firebase admin
 - Actuator
-<br>
 ![Database](https://github.com/Sh1bari/RT5_BestHack_24/blob/main/main.png)
 
 ## Deploy
