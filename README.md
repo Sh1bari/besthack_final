@@ -3,7 +3,7 @@
 
 ## vova@vova|1111111
 
-## string@mail.ru|string
+## string@mail.ru|string123
 
 *Работает только для хостинга, для запуска локально информация ниже*
 - [Site](https://my-timecheck.ru/)
