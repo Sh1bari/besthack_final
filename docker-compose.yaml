@@ -12,6 +12,17 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5432:5432"
+  postgresauthservice:
+    image: postgres:16-alpine
+    hostname: postgresauthservice
+    container_name: my-postgres-auth
+    restart: always
+    environment:
+      - POSTGRES_DB=Time-tracker-auth
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
 
   mainservice:
     build:
@@ -22,14 +33,10 @@ services:
     build:
       context: ./AuthorizationServer
     depends_on:
-      - postgresmainservice
+      - postgresauthservice
   api:
     build:
       context: ./ApiGateway
-    depends_on:
-      - postgresmainservice
   eureka:
     build:
       context: ./EurekaServer
-    depends_on:
-      - postgresmainservice
