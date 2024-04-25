@@ -18,3 +18,18 @@ services:
       context: ./MainService
     depends_on:
       - postgresmainservice
+  auth:
+    build:
+      context: ./AuthorizationServer
+    depends_on:
+      - postgresmainservice
+  api:
+    build:
+      context: ./ApiGateway
+    depends_on:
+      - postgresmainservice
+  eureka:
+    build:
+      context: ./EurekaServer
+    depends_on:
+      - postgresmainservice

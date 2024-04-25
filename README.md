@@ -1,9 +1,9 @@
 # RT5_BestHack_24
 Данные для входа под админом: string|string
-- [Service monitoring](http://my-timecheck.ru/admin-ui/applications)
-- [Service registry](http://my-timecheck.ru/eureka-ui)
-- [Authorization service swagger](http://my-timecheck.ru/api/auth/swagger-ui/index.html#/)
-- [Main service swagger](http://my-timecheck.ru/api/main/swagger-ui/index.html#/)
+- [Service monitoring](https://my-timecheck.ru/admin-ui/applications)
+- [Service registry](https://my-timecheck.ru/ui/eureka-ui)
+- [Authorization service swagger](https://my-timecheck.ru/api/auth/swagger-ui/index.html#/)
+- [Main service swagger](https://my-timecheck.ru/api/main/swagger-ui/index.html#/)
 
 ## Состав команды:
 - Таланкина Варвара: Тимлид-команды
@@ -18,16 +18,16 @@
 ## ApiGateway
 - Spring cloud gateway
 - Spring admin
-- [Service monitoring](http://my-timecheck.ru/admin-ui/applications)
+- [Service monitoring](https://my-timecheck.ru/admin-ui/applications)
 - Actuator
 
 ## Service registry
 - Spring Eureka
-- [Service registry](http://my-timecheck.ru/eureka-ui)
+- [Service registry](https://my-timecheck.ru/eureka-ui)
 - Actuator
 
 ## Authorization service
-- [Authorization service swagger](http:my-timecheck.ru/api/auth/swagger-ui/index.html#/)
+- [Authorization service swagger](https:my-timecheck.ru/api/auth/swagger-ui/index.html#/)
 - Spring security + jwt (key pair)
 - PostgreSql
 - Feign
@@ -39,7 +39,7 @@
 Для запуска в postgres добавить пользователя root, пароль 123, от него создать бд Time-tracker-auth
 
 ## Main service
-- [Main service swagger](http://my-timecheck.ru/api/main/swagger-ui/index.html#/)
+- [Main service swagger](https://my-timecheck.ru/api/main/swagger-ui/index.html#/)
 - Spring security + jwt (public key)
 - PostgreSql
 - Feign
