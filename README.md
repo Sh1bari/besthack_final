@@ -33,8 +33,7 @@
 - Log4j
 - Spring validation
 - Actuator
-<br>
-(https://github.com/Sh1bari/RT5_BestHack_24/blob/main/auth.png)
+!(https://github.com/Sh1bari/RT5_BestHack_24/blob/main/auth.png)
 
 ## Main service
 - [Main service swagger](http://62.217.182.34:8111/api/main/swagger-ui/index.html#/)
@@ -44,8 +43,7 @@
 - Spring validation
 - Firebase admin
 - Actuator
-<br>
-(https://github.com/Sh1bari/RT5_BestHack_24/blob/main/main.png)
+!(https://github.com/Sh1bari/RT5_BestHack_24/blob/main/main.png)
 
 ## Deploy
 - Beget host
