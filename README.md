@@ -28,7 +28,7 @@
 
 ## Main service
 - [Main service swagger](http://62.217.182.34:8111/api/main/swagger-ui/index.html#/)
-- Spring security + jwt (public pair)
+- Spring security + jwt (public key)
 - PostgreSql
 - Feign
 - Spring validation
