@@ -35,6 +35,8 @@
 - Actuator
 ![Database](https://github.com/Sh1bari/RT5_BestHack_24/blob/main/auth.png)
 
+Для запуска в postgres добавить пользователя root, пароль 123, от него создать бд Time-tracker-auth
+
 ## Main service
 - [Main service swagger](http://my-timecheck.ru/api/main/swagger-ui/index.html#/)
 - Spring security + jwt (public key)
@@ -44,6 +46,8 @@
 - Firebase admin
 - Actuator
 ![Database](https://github.com/Sh1bari/RT5_BestHack_24/blob/main/main.png)
+
+Для запуска в postgres добавить пользователя root, пароль 123, от него создать бд main-db
 
 ## Deploy
 - Beget host
