@@ -1,5 +1,7 @@
 # RT5_BestHack_24
-Данные для входа под админом: string|string
+Данные для входа под админом: vova@vova|1111111<br/>
+*Работает только для хостинга, для запуска локально информация ниже*
+- [Site](https://my-timecheck.ru/)
 - [Service monitoring](http://62.217.182.34:8111/admin-ui/applications)
 - [Service registry](https://my-timecheck.ru/ui/eureka-ui)
 - [Authorization service swagger](https://my-timecheck.ru/api/auth/swagger-ui/index.html#/)
@@ -7,7 +9,7 @@
 
 ## Состав команды:
 - Таланкина Варвара: Тимлид-команды
-- Краснов Владимир: Java бекенд-разработчик
+- Краснов Владимир: Java бекенд-разработчик \ DevOps
 - Аюшиев Тимур: Фронтенд-разработчик
 - Толкачев Родион: Фронтенд-разработчик
 
@@ -36,8 +38,6 @@
 - Actuator<br/>
 ![Database](https://github.com/Sh1bari/RT5_BestHack_24/blob/main/auth.png)
 
-Для запуска в postgres добавить пользователя root, пароль 123, от него создать бд Time-tracker-auth
-
 ## Main service
 - [Main service swagger](https://my-timecheck.ru/api/main/swagger-ui/index.html#/)
 - Spring security + jwt (public key)
@@ -47,8 +47,6 @@
 - Firebase admin
 - Actuator<br/>
 ![Database](https://github.com/Sh1bari/RT5_BestHack_24/blob/main/main.png)
-
-Для запуска в postgres добавить пользователя root, пароль 123, от него создать бд main-db
 
 ## Deploy
 - Beget host
@@ -103,6 +101,7 @@
 - [Authorization service swagger](http://localhost:8111/api/auth/swagger-ui/index.html#/)
 - [Main service swagger](http://localhost:8111/api/main/swagger-ui/index.html#/)
 
+Без команд ниже приложение будет работать нестабильно!<br/>
 После старта докера
 ```bash
 podman exec -it my-postgres-auth bash
