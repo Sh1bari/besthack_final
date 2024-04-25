@@ -102,3 +102,14 @@
 - [Service registry](http://localhost:8111/eureka-ui)
 - [Authorization service swagger](http://localhost:8111/api/auth/swagger-ui/index.html#/)
 - [Main service swagger](http://localhost:8111/api/main/swagger-ui/index.html#/)
+
+После старта докера
+podman exec -it my-postgres-auth bash
+psql -U postgres -d Time-tracker-auth
+INSERT INTO roles (name) VALUES ('ROLE_USER');
+\q
+exit
+podman exec -it my-postgres bash
+psql -U postgres -d main-db
+SELECT * FROM users;
+UPDATE users SET global_role = 'ROLE_ADMIN' WHERE id = 'ваш-id';

@@ -12,9 +12,11 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5432:5432"
+    volumes:
+      - pg-data-main:/var/lib/postgresql/data
+
   postgresauthservice:
     image: postgres:16-alpine
-    hostname: postgresauthservice
     container_name: my-postgres-auth
     restart: always
     environment:
@@ -22,24 +24,45 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - "5432:5432"
-
+      - "5433:5432"
+    volumes:
+      - pg-data-auth:/var/lib/postgresql/data
   mainservice:
     build:
       context: ./MainService
     depends_on:
       - postgresmainservice
+      - eureka
+    ports:
+      - "8081:8081"
   auth:
     build:
       context: ./AuthorizationServer
     depends_on:
       - postgresauthservice
+      - eureka
+    ports:
+      - "8080:8080"
   api:
     build:
       context: ./ApiGateway
+    depends_on:
+      - eureka
+    ports:
+      - "8111:8111"
   eureka:
+    hostname: eureka
     build:
       context: ./EurekaServer
+    ports:
+      - "8761:8761"
   front:
     build:
       context: ./besthack-24
+    depends_on:
+      - api
+    ports:
+      - "3000:3000"
+volumes:
+  pg-data-main:
+  pg-data-auth:
