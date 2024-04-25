@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  postgresmainservice:
+    image: postgres:16-alpine
+    hostname: postgresmainservice
+    container_name: my-postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=main-db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+
+  mainservice:
+    build:
+      context: ./MainService
+    depends_on:
+      - postgresmainservice
