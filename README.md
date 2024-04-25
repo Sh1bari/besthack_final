@@ -43,8 +43,11 @@
 - Firebase admin
 - Actuator
 
-# Frontend
+## Deploy
+- Beget host
+- Nginx
 
+# Frontend
 Стек технологий:
 - React v18
 - TypeScript
