@@ -1,0 +1,15 @@
+[submodule "MainService"]
+	path = MainService
+	url = https://github.com/Sh1bari/MainService.git
+[submodule "AuthorizationServer"]
+	path = AuthorizationServer
+	url = https://github.com/Sh1bari/AuthorizationServer
+[submodule "ApiGateway"]
+	path = ApiGateway
+	url = https://github.com/Sh1bari/ApiGateway
+[submodule "EurekaServer"]
+	path = EurekaServer
+	url = https://github.com/Sh1bari/EurekaServer
+[submodule "besthack-24"]
+	path = besthack-24
+	url = https://github.com/Tifftal/besthack-24
