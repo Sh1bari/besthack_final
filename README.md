@@ -1,9 +1,9 @@
 # RT5_BestHack_24
-##Данные для входа под админом: 
+## Данные для входа под админом: 
 
-##vova@vova|1111111
+## vova@vova|1111111
 
-##string@mail.ru|string
+## string@mail.ru|string
 
 *Работает только для хостинга, для запуска локально информация ниже*
 - [Site](https://my-timecheck.ru/)
