@@ -1,8 +1,8 @@
 # RT5_BestHack_24
-- [Service monitoring](http://62.217.182.34:8111/admin-ui/applications)
-- [Service registry](http://62.217.182.34:8111/eureka-ui)
-- [Authorization service swagger](http://62.217.182.34:8111/api/auth/swagger-ui/index.html#/)
-- [Main service swagger](http://62.217.182.34:8111/api/main/swagger-ui/index.html#/)
+- [Service monitoring](http://my-timecheck.ru/admin-ui/applications)
+- [Service registry](http://my-timecheck.ru/eureka-ui)
+- [Authorization service swagger](http://my-timecheck.ru/api/auth/swagger-ui/index.html#/)
+- [Main service swagger](http://my-timecheck.ru/api/main/swagger-ui/index.html#/)
 
 ## Состав команды:
 - Таланкина Варвара: Тимлид-команды
@@ -17,16 +17,16 @@
 ## ApiGateway
 - Spring cloud gateway
 - Spring admin
-- [Service monitoring](http://62.217.182.34:8111/admin-ui/applications)
+- [Service monitoring](http://my-timecheck.ru/admin-ui/applications)
 - Actuator
 
 ## Service registry
 - Spring Eureka
-- [Service registry](http://62.217.182.34:8111/eureka-ui)
+- [Service registry](http://my-timecheck.ru/eureka-ui)
 - Actuator
 
 ## Authorization service
-- [Authorization service swagger](http://62.217.182.34:8111/api/auth/swagger-ui/index.html#/)
+- [Authorization service swagger](http:my-timecheck.ru/api/auth/swagger-ui/index.html#/)
 - Spring security + jwt (key pair)
 - PostgreSql
 - Feign
@@ -36,7 +36,7 @@
 ![Database](https://github.com/Sh1bari/RT5_BestHack_24/blob/main/auth.png)
 
 ## Main service
-- [Main service swagger](http://62.217.182.34:8111/api/main/swagger-ui/index.html#/)
+- [Main service swagger](http://my-timecheck.ru/api/main/swagger-ui/index.html#/)
 - Spring security + jwt (public key)
 - PostgreSql
 - Feign
