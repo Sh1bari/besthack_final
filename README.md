@@ -1,4 +1,5 @@
 # RT5_BestHack_24
+Данные для входа под админом: string|string
 - [Service monitoring](http://my-timecheck.ru/admin-ui/applications)
 - [Service registry](http://my-timecheck.ru/eureka-ui)
 - [Authorization service swagger](http://my-timecheck.ru/api/auth/swagger-ui/index.html#/)
