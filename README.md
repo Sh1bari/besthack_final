@@ -86,3 +86,10 @@
 - Связи департаментов. С помощью библиотеки react-graph-vis был реализован граф, по которому можно определить из какого, в какой департамент может отправлять сотрудник уведомления.
 
 - История конкретного пользователя. В профиле пользователь может увидеть свою историю уведомлений, все уведомления, которые он когда-либо отправлял.
+
+При запуске с docker-compose
+- [Frontend](http://localhost:3000)
+- [Service monitoring](http://localhost:8111/admin-ui/applications)
+- [Service registry](http://localhost:8111/eureka-ui)
+- [Authorization service swagger](http://localhost:8111/api/auth/swagger-ui/index.html#/)
+- [Main service swagger](http://localhost:8111/api/main/swagger-ui/index.html#/)

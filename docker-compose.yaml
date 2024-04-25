@@ -40,3 +40,6 @@ services:
   eureka:
     build:
       context: ./EurekaServer
+  front:
+    build:
+      context: ./besthack-24
