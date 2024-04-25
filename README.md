@@ -33,7 +33,7 @@
 - Feign
 - Log4j
 - Spring validation
-- Actuator
+- Actuator<br/>
 ![Database](https://github.com/Sh1bari/RT5_BestHack_24/blob/main/auth.png)
 
 Для запуска в postgres добавить пользователя root, пароль 123, от него создать бд Time-tracker-auth
@@ -45,7 +45,7 @@
 - Feign
 - Spring validation
 - Firebase admin
-- Actuator
+- Actuator<br/>
 ![Database](https://github.com/Sh1bari/RT5_BestHack_24/blob/main/main.png)
 
 Для запуска в postgres добавить пользователя root, пароль 123, от него создать бд main-db
@@ -104,6 +104,7 @@
 - [Main service swagger](http://localhost:8111/api/main/swagger-ui/index.html#/)
 
 После старта докера
+```bash
 podman exec -it my-postgres-auth bash
 psql -U postgres -d Time-tracker-auth
 INSERT INTO roles (name) VALUES ('ROLE_USER');
@@ -113,3 +114,4 @@ podman exec -it my-postgres bash
 psql -U postgres -d main-db
 SELECT * FROM users;
 UPDATE users SET global_role = 'ROLE_ADMIN' WHERE id = 'ваш-id';
+```
