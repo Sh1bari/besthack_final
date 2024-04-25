@@ -107,6 +107,7 @@
 - [Main service swagger](http://localhost:8111/api/main/swagger-ui/index.html#/)
 
 Без команд ниже приложение будет работать нестабильно!<br/>
+Дождитесь запуска всех контейнеров<br/>
 После старта докера
 ```bash
 podman exec -it my-postgres-auth bash
