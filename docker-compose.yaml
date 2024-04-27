@@ -30,6 +30,11 @@ services:
   mainservice:
     build:
       context: ./MainService
+    environment:
+      - POSTGRES_ADDRESS=postgresmainservice
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_PASSWORD=postgres
+      - EUREKA_ADDRESS=eureka
     depends_on:
       - postgresmainservice
       - eureka
@@ -38,6 +43,11 @@ services:
   auth:
     build:
       context: ./AuthorizationServer
+    environment:
+      - POSTGRES_ADDRESS=postgresauthservice
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_PASSWORD=postgres
+      - EUREKA_ADDRESS=eureka
     depends_on:
       - postgresauthservice
       - eureka
@@ -48,6 +58,8 @@ services:
       context: ./ApiGateway
     depends_on:
       - eureka
+    environment:
+      - EUREKA_ADDRESS=eureka
     ports:
       - "8111:8111"
   eureka:
