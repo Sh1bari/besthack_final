@@ -29,7 +29,7 @@ services:
       - pg-data-auth:/var/lib/postgresql/data
   mainservice:
     build:
-      context: ./MainService
+      context: ./MainService_bestHack_final
     environment:
       - POSTGRES_ADDRESS=postgresmainservice
       - POSTGRES_USERNAME=postgres
@@ -42,7 +42,7 @@ services:
       - "8081:8081"
   auth:
     build:
-      context: ./AuthorizationServer
+      context: ./AuthorizationServer_bestHack_final
     environment:
       - POSTGRES_ADDRESS=postgresauthservice
       - POSTGRES_USERNAME=postgres
@@ -55,7 +55,7 @@ services:
       - "8080:8080"
   api:
     build:
-      context: ./ApiGateway
+      context: ./ApiGateway_bestHack_final
     depends_on:
       - eureka
     environment:
@@ -65,7 +65,7 @@ services:
   eureka:
     hostname: eureka
     build:
-      context: ./EurekaServer
+      context: ./eurekaServer_bestHack_final
     ports:
       - "8761:8761"
   front:
