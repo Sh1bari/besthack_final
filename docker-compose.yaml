@@ -27,19 +27,19 @@ services:
       - "5433:5432"
     volumes:
       - pg-data-auth:/var/lib/postgresql/data
-  mainservice:
-    build:
-      context: ./MainService_bestHack_final
-    environment:
-      - POSTGRES_ADDRESS=postgresmainservice
-      - POSTGRES_USERNAME=postgres
-      - POSTGRES_PASSWORD=postgres
-      - EUREKA_ADDRESS=eureka
-    depends_on:
-      - postgresmainservice
-      - eureka
-    ports:
-      - "8081:8081"
+#  mainservice:
+#    build:
+#      context: ./MainService_bestHack_final
+#    environment:
+#      - POSTGRES_ADDRESS=postgresmainservice
+#      - POSTGRES_USERNAME=postgres
+#      - POSTGRES_PASSWORD=postgres
+#      - EUREKA_ADDRESS=eureka
+#    depends_on:
+#      - postgresmainservice
+#      - eureka
+#    ports:
+#      - "8081:8081"
   auth:
     build:
       context: ./AuthorizationServer_bestHack_final
