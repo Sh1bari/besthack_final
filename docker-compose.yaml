@@ -68,13 +68,13 @@ services:
       context: ./eurekaServer_bestHack_final
     ports:
       - "8761:8761"
-  front:
-    build:
-      context: ./besthack-24
-    depends_on:
-      - api
-    ports:
-      - "3000:3000"
+#  front:
+#    build:
+#      context: ./besthack-24
+#    depends_on:
+#      - api
+#    ports:
+#      - "3000:3000"
 volumes:
   pg-data-main:
   pg-data-auth:
