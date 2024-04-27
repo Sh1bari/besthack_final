@@ -7,7 +7,7 @@ services:
     container_name: my-postgres
     restart: always
     environment:
-      - POSTGRES_DB=main-db
+      - POSTGRES_DB=main-final
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
@@ -20,7 +20,7 @@ services:
     container_name: my-postgres-auth
     restart: always
     environment:
-      - POSTGRES_DB=Time-tracker-auth
+      - POSTGRES_DB=auth-final
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
