@@ -1,7 +1,10 @@
 # RT5_BestHack_24
 ## Данные для входа под админом: 
 
+
 ## +76666666666 | 1655
+### После запуска сделать запрос на /init [Authorization service swagger](https://my-timecheck.ru/api/auth/swagger-ui/index.html#/)
+
 
 *Работает только для хостинга, для запуска локально информация ниже*
 - [Site](https://my-timecheck.ru/)
