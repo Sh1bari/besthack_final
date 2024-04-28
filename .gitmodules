@@ -25,3 +25,6 @@
 [submodule "ApiGateway_bestHack_final"]
 	path = ApiGateway_bestHack_final
 	url = https://github.com/Sh1bari/ApiGateway_bestHack_final
+[submodule "bestkack-24-final"]
+	path = bestkack-24-final
+	url = https://github.com/Tifftal/bestkack-24-final
