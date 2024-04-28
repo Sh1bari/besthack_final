@@ -91,4 +91,4 @@ services:
 volumes:
   pg-data-main:
   pg-data-auth:
-  minio-data:
+#  minio-data:
