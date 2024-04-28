@@ -1,9 +1,7 @@
 # RT5_BestHack_24
 ## Данные для входа под админом: 
 
-## vova@vova|1111111
-
-## string@mail.ru|string123
+## +76666666666 | 1655
 
 *Работает только для хостинга, для запуска локально информация ниже*
 - [Site](https://my-timecheck.ru/)
@@ -46,7 +44,7 @@
 - Spring validation
 - Firebase admin
 - Actuator<br/>
-![Database](https://github.com/Sh1bari/RT5_BestHack_24/blob/main/main.png)
+![Database](https://github.com/Sh1bari/besthack_final/blob/main/main.png)
 
 ## Deploy
 - Beget host
