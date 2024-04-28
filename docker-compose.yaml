@@ -50,7 +50,6 @@ services:
     depends_on:
       - postgresmainservice
       - eureka
-      - minio
     ports:
       - "8081:8081"
   auth:
