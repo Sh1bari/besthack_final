@@ -1,18 +1,29 @@
 version: '3.8'
 
 services:
-#  minio:
-#    image: minio/minio
-#    container_name: minio
-#    hostname: minio
-#    restart: always
-#    ports:
-#      - "9000:9000"
-#    environment:
-#      MINIO_ROOT_USER: minioadmin
-#      MINIO_ROOT_PASSWORD: minioadmin
-#    volumes:
-#      - minio-data:/data
+  minio:
+    image: quay.io/minio/minio:RELEASE.2023-12-20T01-00-02Z-cpuv1
+    restart: always
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio-volume:/data
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    command: server --console-address ":9001" /data
+  createbuckets:
+    image: quay.io/minio/mc:RELEASE.2023-12-20T07-14-22Z-cpuv1
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc alias set aqminio http://minio:9000 minioadmin minioadmin;
+      /usr/bin/mc mb aqminio/file-storage;
+      /usr/bin/mc anonymous set public aqminio/file-storage;
+      exit 0;
+      "
   postgresmainservice:
     image: postgres:16-alpine
     hostname: postgresmainservice
@@ -47,9 +58,12 @@ services:
       - POSTGRES_USERNAME=postgres
       - POSTGRES_PASSWORD=postgres
       - EUREKA_ADDRESS=eureka
+      - MINIO_URL=minio
+      - MINIO_BUCKET=file-storage
     depends_on:
       - postgresmainservice
       - eureka
+      - minio
     ports:
       - "8081:8081"
   auth:
@@ -90,4 +104,4 @@ services:
 volumes:
   pg-data-main:
   pg-data-auth:
-#  minio-data:
+  minio-volume:
