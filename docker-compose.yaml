@@ -1,6 +1,18 @@
 version: '3.8'
 
 services:
+  minio:
+    image: minio/minio
+    container_name: minio
+    hostname: minio
+    restart: always
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio-data:/data
   postgresmainservice:
     image: postgres:16-alpine
     hostname: postgresmainservice
@@ -38,6 +50,7 @@ services:
     depends_on:
       - postgresmainservice
       - eureka
+      - minio
     ports:
       - "8081:8081"
   auth:
@@ -78,3 +91,4 @@ services:
 volumes:
   pg-data-main:
   pg-data-auth:
+  minio-data:
